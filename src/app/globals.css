@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/*
+ * Colours come from the existing MyMasjid control panel: blue top bar, dark icon rail, and the
+ * teal / sky / yellow used on the summary tiles. The panel is light-only, like the current one.
+ */
+@theme {
+  --color-brand: #1e88e5;
+  --color-brand-dark: #1565c0;
+  --color-brand-soft: #e3f1fd;
+  --color-rail: #1f2430;
+  --color-canvas: #f3f5f9;
+  --color-ink: #2b3140;
+  --color-muted: #6b7385;
+  --color-line: #e1e5ee;
+  --color-danger: #b42a44;
+  --color-danger-soft: #fde4e8;
+  --color-teal: #21c5a6;
+  --color-sky: #22b0e1;
+  --color-sun: #fdc10a;
+}
+
+@theme inline {
+  --font-sans: var(--font-montserrat), system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
